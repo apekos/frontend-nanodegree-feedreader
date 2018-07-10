@@ -91,9 +91,8 @@ $(function() {
             });
         });
 
-        it('should contain entry element', function(done) {
+        it('should contain entry element', function() {
             expect($('.feed .entry').length).toBeGreaterThan(0);
-            done();
         });
     });
 
@@ -115,14 +114,13 @@ $(function() {
                 loadFeed(1, function() {
                     newFeed = $('.feed').html();
                     done();
-                })
-            })
+                });
+            });
         });
 
-        it('content actually changes', function(done) {
+        it('content actually changes', function() {
             // compare the new feed content with the old one
             expect(oldFeed).not.toBe(newFeed);
-            done();
         });
-    })
+    });
 }());
